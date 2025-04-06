@@ -66,7 +66,7 @@ export class ProfileServiceComponent {
   {
     this.httpClient.put(this.baseProfile+'/updateOne',
       {
-        id1: this.updateFormGroup.get('id')?.value,
+        id: this.updateFormGroup.get('id')?.value,
         name: this.updateFormGroup.get('name')?.value,
         email: this.updateFormGroup.get('email')?.value
       },{observe: 'response'}
