@@ -78,10 +78,8 @@ export class ProfileServiceComponent {
 
   deleteOne()
   {
-    console.log('dsa')
-    this.httpClient.delete(this.baseProfile+'/deleteOne',
+    this.httpClient.delete(this.baseProfile+'/deleteOne/'+this.deleteId.value,
       {
-        params: {id1:this.deleteId.value},
         observe: 'response'
       }
     ).subscribe({
