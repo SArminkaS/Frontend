@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/scss/functions";
-@import '../node_modules/bootstrap/scss/variables';
+@import "../node_modules/bootstrap/scss/variables";
 
 
 :root {
@@ -9,6 +9,14 @@
   --red-300: #{$red-300};
   --orange-300: #{$orange-300};
 
+}
+
+form{
+  width: 50%;
+  margin-left: 25%;
+}
+div.container{
+  min-width: 230px;
 }
 
 .form-control:focus.primary {

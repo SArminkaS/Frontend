@@ -1,1 +1,36 @@
-<p>address-service works!</p>
+<div class="container">
+    <app-card class="col m-5" primary_color="primary" secondary_color="blue-300" title="GET /address/getOne/:id" description="Lekérdezi egy tanulónak a címét!">
+        <form [formGroup]="getFormGroup" (ngSubmit)="getOne()">
+          <div class="mb-3">
+            <label for="username0" class="form-label">Felhasználónév</label>
+            <input type="text" class="form-control primary" id="username0" formControlName="username" required>
+          </div>
+          <div class="mb-3">
+            <label for="password0" class="form-label">Jelszó</label>
+            <input type="password" class="form-control primary" id="password0" formControlName="password" required>
+          </div>
+          <div class="mb-3">
+            <label for="id" class="form-label">Cím azonosító</label>
+            <input type="text" class="form-control primary" id="id" formControlName="id" required>
+          </div>
+          <button type="submit" [disabled]="!getFormGroup.valid" class="btn btn-primary">Lekérdezés</button>
+        </form>
+        <pre>{{responses[0] | json}}</pre>
+        <pre>{{errors[0] | json}}</pre>
+      </app-card>
+      <app-card class="col m-5" primary_color="success" secondary_color="green-300" title="POST /auth/register" description="Egy felhasználót regisztrál!">
+        <form [formGroup]="postFormGroup" (ngSubmit)="postOne()">
+          <div class="mb-3">
+            <label for="username1" class="form-label">Név</label>
+            <input type="text" class="form-control success" id="username1" formControlName="username" required>
+          </div>
+          <div class="mb-3">
+            <label for="password1" class="form-label">Jelszó</label>
+            <input type="password" class="form-control success" id="password1" formControlName="password" required>
+          </div>
+          <button type="submit" [disabled]="!postFormGroup.valid" class="btn btn-success">Hozzáadás</button>
+        </form>
+        <pre>{{responses[1] | json}}</pre>
+        <pre>{{errors[1] | json}}</pre>
+      </app-card>
+</div>
