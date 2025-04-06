@@ -1,0 +1,11 @@
+form{
+    width: 50%;
+    margin-left: 25%;
+}
+div.container{
+    min-width: 230px;
+}
+.form-control:focus.success {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+} 
