@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-@Input() color = ''
+@Input() primary_color = ''
+@Input() secondary_color = ''
 @Input() description = ''
 @Input() title = ''
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardComponent } from "../card/card.component";
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 

@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/functions";
+@import '../node_modules/bootstrap/scss/variables';
+
+
+:root {
+  --blue-300: #{$blue-300};
+  --green-300: #{$green-300};
+  --red-300: #{$red-300};
+  --orange-300: #{$orange-300};
+
+}
+
+.form-control:focus.primary {
+  color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--blue-300);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--blue-300);
+  }
+.form-control:focus.success {
+color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: var(--green-300);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--green-300);
+}
+.form-control:focus.warning {
+  color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: var(--orange-300);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem var(--orange-300);
+  }
+  .form-control:focus.danger {
+    color: var(--bs-body-color);
+      background-color: var(--bs-body-bg);
+      border-color: var(--red-300);
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem var(--red-300);
+    }

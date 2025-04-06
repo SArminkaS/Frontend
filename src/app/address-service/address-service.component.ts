@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-address-service',
   imports: [],
   templateUrl: './address-service.component.html',
-  styleUrl: './address-service.component.css'
+  styleUrl: './address-service.component.scss'
 })
 export class AddressServiceComponent {
 

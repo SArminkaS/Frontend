@@ -1,25 +1,25 @@
 <p class="m-5">Base url: 127.0.0.1:3001</p>
 <div class="container">
-  <app-card class="col m-5" color="primary" title="GET \list" description="Lekérdezi az adatbázisban lévő tanulókat!">
+  <app-card class="col m-5" primary_color="primary" secondary_color="blue-300" title="GET \list" description="Lekérdezi az adatbázisban lévő tanulókat!">
     <form [formGroup]="getFormGroup" (ngSubmit)="getAll()">
       <div class="mb-3">
         <label for="page" class="form-label">Oldalszám</label>
-        <input type="number" min="1" class="form-control" id="page" formControlName="currentPage" required="">
+        <input type="number" min="1" class="form-control primary" id="page" formControlName="currentPage" required="">
       </div>
       <div class="mb-3">
         <label for="NumOfItemsInPage" class="form-label">tanuló/oldal</label>
-        <input type="number" min="1" class="form-control" id="NumOfItemsInPage" formControlName="perPage" required="">
+        <input type="number" min="1" class="form-control primary" id="NumOfItemsInPage" formControlName="perPage" required="">
       </div>
       <button type="submit" [disabled]="!getFormGroup.valid" class="btn btn-primary">Lekérdezés</button>
     </form>
     <pre>{{responses[0] | json}}</pre>
     <pre>{{errors[0] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" color="success" title="POST \addOne" description="Hozzáad egy tanulót!">
+  <app-card class="col m-5" primary_color="success" secondary_color="green-300" title="POST \addOne" description="Hozzáad egy tanulót!">
     <form [formGroup]="postFormGroup" (ngSubmit)="postOne()">
       <div class="mb-3">
         <label for="email0" class="form-label">Email cím</label>
-        <input type="email" class="form-control" id="email0" formControlName="email" aria-describedby="emailHelp" required>
+        <input type="email" class="form-control success" id="email0" formControlName="email" aria-describedby="emailHelp" required>
       </div>
       <div class="mb-3">
         <label for="name0" class="form-label">Név</label>
@@ -30,31 +30,31 @@
     <pre>{{responses[1] | json}}</pre>
     <pre>{{errors[1] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" color="warning" title="UPDATE \updateOne" description="Módosítja a tanuló adatit!">
+  <app-card class="col m-5" primary_color="warning" secondary_color="orange-300" title="UPDATE \updateOne" description="Módosítja a tanuló adatit!">
     <form [formGroup]="updateFormGroup" (ngSubmit)="updateOne()">
       <div class="mb-3">
           <label for="id0" class="form-label">Tanuló azonosítója</label>
-          <input type="text" class="form-control" id="id0" formControlName="id" required>
+          <input type="text" class="form-control warning" id="id0" formControlName="id" required>
           <div id="id" class="form-text">Ez egy 4 - es verziójú UUID azonosító.</div>
         </div>
       <div class="mb-3">
         <label for="email1" class="form-label">Email cím</label>
-        <input type="email" class="form-control" id="email1" formControlName="email" aria-describedby="emailHelp">
+        <input type="email" class="form-control warning" id="email1" formControlName="email" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
         <label for="name1" class="form-label">Név</label>
-        <input type="text" class="form-control" formControlName="name" id="name1">
+        <input type="text" class="form-control warning" formControlName="name" id="name1">
       </div>
       <button type="submit" [disabled]="!updateFormGroup.valid" class="btn btn-warning">Módosítás</button>
     </form>
     <pre>{{responses[2] | json}}</pre>
     <pre>{{errors[2] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" color="danger" title="DELETE \deleteOne" description="Töröl egy tanulót!">
+  <app-card class="col m-5" primary_color="danger" secondary_color="red-300" title="DELETE \deleteOne" description="Töröl egy tanulót!">
     <form (ngSubmit)="deleteOne()">
       <div class="mb-3">
           <label for="id1" class="form-label">Tanuló azonosítója</label>
-          <input type="text" class="form-control" [formControl]="deleteId" id="id1" required>
+          <input type="text" class="form-control danger" [formControl]="deleteId" id="id1" required>
           <div id="id" class="form-text">Ez egy 4 - es verziójú UUID azonosító.</div>
         </div>
       <button type="submit" [disabled]="!deleteId.valid" class="btn btn-danger">Törlés</button>

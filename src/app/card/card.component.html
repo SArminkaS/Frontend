@@ -1,9 +1,9 @@
-<div class="card border-{{color}}">
-    <div class="card-body pt-0">
-        <div class="bg-{{color}}">
-      <h5 class="card-title text-light p-1">{{title}}</h5>
+<div class="card border-{{primary_color}}">
+    <div class="card-body">
+        <div [style.background-color]="'var(--' + secondary_color + ')'">
+      <h5 class="card-title text-light p-1 bg-{{primary_color}} d-inline">{{title}}</h5>
     </div>
-    <span class="text-{{color}}">{{description}}</span>
+    <span class="text-{{primary_color}}">{{description}}</span>
   <ng-content></ng-content>
     </div>
   </div>
