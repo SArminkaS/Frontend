@@ -31,14 +31,11 @@ export class AddressServiceComponent {
 
   getOne()
   {
-    const headers =  {
-      username: this.getFormGroup.get('username')?.value,
-      password: this.getFormGroup.get('password')?.value
-    }
+    const headers =  'Basic '+btoa(this.getFormGroup.get('username')?.value+':'+this.getFormGroup.get('password')?.value)
     this.httpClient.get(this.baseAddress+'/address/getOne/'+this.getFormGroup.get('id')?.value,
   {
     observe: 'response',
-    headers: {authorization:"Basic "+headers}
+    headers: {authorization:headers}
 
   }).subscribe(
     {

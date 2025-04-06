@@ -1,6 +1,5 @@
-<p class="m-5">Base url: 127.0.0.1:3001</p>
 <div class="container">
-  <app-card class="col m-5" primary_color="primary" secondary_color="blue-300" title="GET \list" description="Lekérdezi az adatbázisban lévő tanulókat!">
+  <app-card class="col m-5" primary_color="primary" secondary_color="blue-300" method="GET" path="/list" description="Lekérdezi az adatbázisban lévő tanulókat!">
     <form [formGroup]="getFormGroup" (ngSubmit)="getAll()">
       <div class="mb-3">
         <label for="page" class="form-label">Oldalszám</label>
@@ -15,7 +14,7 @@
     <pre>{{responses[0] | json}}</pre>
     <pre>{{errors[0] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" primary_color="success" secondary_color="green-300" title="POST \addOne" description="Hozzáad egy tanulót!">
+  <app-card class="col m-5" primary_color="success" secondary_color="green-300" method="POST" path="/addOne" description="Hozzáad egy tanulót!">
     <form [formGroup]="postFormGroup" (ngSubmit)="postOne()">
       <div class="mb-3">
         <label for="email0" class="form-label">Email cím</label>
@@ -30,7 +29,7 @@
     <pre>{{responses[1] | json}}</pre>
     <pre>{{errors[1] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" primary_color="warning" secondary_color="orange-300" title="UPDATE \updateOne" description="Módosítja a tanuló adatit!">
+  <app-card class="col m-5" primary_color="warning" secondary_color="orange-300" method="UPDATE" path="/updateOne" description="Módosítja a tanuló adatit!">
     <form [formGroup]="updateFormGroup" (ngSubmit)="updateOne()">
       <div class="mb-3">
           <label for="id0" class="form-label">Tanuló azonosítója</label>
@@ -50,7 +49,7 @@
     <pre>{{responses[2] | json}}</pre>
     <pre>{{errors[2] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" primary_color="danger" secondary_color="red-300" title="DELETE \deleteOne" description="Töröl egy tanulót!">
+  <app-card class="col m-5" primary_color="danger" secondary_color="red-300" method="DELETE" path="/deleteOne/:id" description="Töröl egy tanulót!">
     <form (ngSubmit)="deleteOne()">
       <div class="mb-3">
           <label for="id1" class="form-label">Tanuló azonosítója</label>

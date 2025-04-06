@@ -10,5 +10,6 @@ export class CardComponent {
 @Input() primary_color = ''
 @Input() secondary_color = ''
 @Input() description = ''
-@Input() title = ''
+@Input() method = ''
+@Input() path = ''
 }

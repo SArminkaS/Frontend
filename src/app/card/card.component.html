@@ -1,9 +1,10 @@
 <div class="card border-{{primary_color}}">
     <div class="card-body">
-        <div [style.background-color]="'var(--' + secondary_color + ')'">
-      <h5 class="card-title text-light p-1 bg-{{primary_color}} d-inline">{{title}}</h5>
+        <div class="d-flex justify-content-between align-items-center">
+      <h5 class="card-title text-light bg-{{primary_color}} mb-0 p-2">{{method}}</h5>
+    <div [style.background-color]="'var(--' + secondary_color + ')'" class="fw-bold flex-fill text-end p-1">{{path}}</div>
     </div>
-    <span class="text-{{primary_color}}">{{description}}</span>
+    <p class="text-{{primary_color}}">{{description}}</p>
   <ng-content></ng-content>
     </div>
   </div>
