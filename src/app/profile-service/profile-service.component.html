@@ -1,6 +1,6 @@
 <p class="m-5">Base url: 127.0.0.1:3001</p>
 <div class="container">
-  <app-card class="col m-5" color="bg-primary" title="GET \list" description="Lekérdezi az adatbázisban lévő tanulókat!">
+  <app-card class="col m-5" color="primary" title="GET \list" description="Lekérdezi az adatbázisban lévő tanulókat!">
     <form [formGroup]="getFormGroup" (ngSubmit)="getAll()">
       <div class="mb-3">
         <label for="page" class="form-label">Oldalszám</label>
@@ -15,7 +15,7 @@
     <pre>{{responses[0] | json}}</pre>
     <pre>{{errors[0] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" color="bg-success" title="POST \addOne" description="Hozzáad egy tanulót!">
+  <app-card class="col m-5" color="success" title="POST \addOne" description="Hozzáad egy tanulót!">
     <form [formGroup]="postFormGroup" (ngSubmit)="postOne()">
       <div class="mb-3">
         <label for="email0" class="form-label">Email cím</label>
@@ -23,14 +23,14 @@
       </div>
       <div class="mb-3">
         <label for="name0" class="form-label">Név</label>
-        <input type="text" class="form-control" id="name0" formControlName="name" required>
+        <input type="text" class="form-control success" id="name0" formControlName="name" required>
       </div>
       <button type="submit" [disabled]="!postFormGroup.valid" class="btn btn-success">Hozzáadás</button>
     </form>
     <pre>{{responses[1] | json}}</pre>
     <pre>{{errors[1] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" color="bg-warning" title="UPDATE \updateOne" description="Módosítja a tanuló adatit!">
+  <app-card class="col m-5" color="warning" title="UPDATE \updateOne" description="Módosítja a tanuló adatit!">
     <form [formGroup]="updateFormGroup" (ngSubmit)="updateOne()">
       <div class="mb-3">
           <label for="id0" class="form-label">Tanuló azonosítója</label>
@@ -50,7 +50,7 @@
     <pre>{{responses[2] | json}}</pre>
     <pre>{{errors[2] | json}}</pre>
   </app-card>
-  <app-card class="col m-5" color="bg-danger" title="DELETE \deleteOne" description="Töröl egy tanulót!">
+  <app-card class="col m-5" color="danger" title="DELETE \deleteOne" description="Töröl egy tanulót!">
     <form (ngSubmit)="deleteOne()">
       <div class="mb-3">
           <label for="id1" class="form-label">Tanuló azonosítója</label>

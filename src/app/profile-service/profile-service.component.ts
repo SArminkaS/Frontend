@@ -8,7 +8,7 @@ import { JsonPipe } from '@angular/common';
   selector: 'app-profile-service',
   imports: [CardComponent, ReactiveFormsModule, FormsModule, JsonPipe],
   templateUrl: './profile-service.component.html',
-  styleUrl: './profile-service.component.css'
+  styleUrl: './profile-service.component.scss'
 })
 export class ProfileServiceComponent {
   private readonly baseProfile = 'http://127.0.0.1:3001/student'
