@@ -41,8 +41,8 @@ export class ProfileServiceComponent {
           perPage:this.getFormGroup.get('perPage')?.value,
           currentPage:this.getFormGroup.get('currentPage')?.value}}).subscribe(
             {
-              next: res => {this.responses[0] = res.body; this.errors[0] = ''},
-              error: err => {this.errors[0] = err?.error; this.responses[0] = ''}
+              next: res => {this.responses[0] = res.body; this.errors[0] = undefined},
+              error: err => {this.errors[0] = err?.error; this.responses[0] = undefined}
             }
           )
 
@@ -57,8 +57,8 @@ export class ProfileServiceComponent {
         observe: 'response'
       }).subscribe(
         {
-          next: res => {this.responses[1] = res.body; this.errors[1] = ''},
-              error: err => {this.errors[1] = err?.error; this.responses[1] = ''}
+          next: res => {this.responses[1] = res.body; this.errors[1] = undefined},
+              error: err => {this.errors[1] = err?.error; this.responses[1] = undefined}
     
   })
   }
@@ -71,8 +71,8 @@ export class ProfileServiceComponent {
         email: this.updateFormGroup.get('email')?.value
       },{observe: 'response'}
     ).subscribe({
-      next: res => {this.responses[2] = res.body; this.errors[2] = ''},
-      error: err => {this.errors[2] = err?.error; this.responses[2] = ''}
+      next: res => {this.responses[2] = res.body; this.errors[2] = undefined},
+      error: err => {this.errors[2] = err?.error; this.responses[2] = undefined}
     })
   }
 
@@ -83,8 +83,8 @@ export class ProfileServiceComponent {
         observe: 'response'
       }
     ).subscribe({
-      next: res => {this.responses[3] = res.body; this.errors[3] = ''},
-      error: err => {this.errors[3] = err?.error; this.responses[3] = ''}
+      next: res => {this.responses[3] = res.body; this.errors[3] = undefined},
+      error: err => {this.errors[3] = err?.error; this.responses[3] = undefined}
     })
   }
 }

@@ -39,8 +39,8 @@ export class AddressServiceComponent {
 
   }).subscribe(
     {
-      next: res => {this.responses[0] = res.body; this.errors[0] = ''},
-              error: err => {this.errors[0] = err?.error; this.responses[0] = ''}
+      next: res => {this.responses[0] = res.body; this.errors[0] = undefined},
+              error: err => {this.errors[0] = err?.error; this.responses[0] = undefined}
     }
   )
   }
@@ -54,8 +54,8 @@ export class AddressServiceComponent {
       observe: 'response'
     }).subscribe(
       {
-        next: res => {this.responses[1] = res.body; this.errors[1] = ''},
-              error: err => {this.errors[1] = err?.error; this.responses[1] = ''}
+        next: res => {this.responses[1] = res.body; this.errors[1] = undefined},
+              error: err => {this.errors[1] = err?.error; this.responses[1] = undefined}
       }
     )
   }
