@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class AddressServiceComponent {
   constructor(private readonly httpClient: HttpClient){}
 
-  private readonly baseAddress = 'http://localhost:3002'
+  private readonly baseAddress = 'http://192.168.1.10:3002'
 
   responses = new Array(2)
   errors = new Array(2)
@@ -39,8 +39,8 @@ export class AddressServiceComponent {
 
   }).subscribe(
     {
-      next: res => this.responses[0] = res.body,
-      error: err => this.errors[0] = err?.error
+      next: res => {this.responses[0] = res.body; this.errors[0] = ''},
+              error: err => {this.errors[0] = err?.error; this.responses[0] = ''}
     }
   )
   }
@@ -54,8 +54,8 @@ export class AddressServiceComponent {
       observe: 'response'
     }).subscribe(
       {
-        next: res => this.responses[1] = res.body,
-        error: err => this.errors[1] = err?.error
+        next: res => {this.responses[1] = res.body; this.errors[1] = ''},
+              error: err => {this.errors[1] = err?.error; this.responses[1] = ''}
       }
     )
   }
